@@ -9,7 +9,7 @@ export function InstagramSection() {
         {/* LEFT — LOGO */}
         <div className="flex justify-center md:justify-start">
           <img
-            src="/instagram.png"
+            src="/Instagram.png"
             alt="Instagram"
             className="w-[260px] md:w-[320px] object-contain transition-transform duration-300 hover:scale-105"
           />
