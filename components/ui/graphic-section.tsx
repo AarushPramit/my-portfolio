@@ -25,22 +25,23 @@ function ProjectCard({ project }: any) {
     <motion.div ref={ref} style={{ y, opacity }} className="group">
       
       {/* IMAGE */}
-      <div className="relative rounded-2xl overflow-hidden w-full h-[520px] flex items-center justify-center">
-        
-        <img
-          src={project.image}
-          alt={project.title}
-          className="w-full h-full object-contain transition-all duration-500 ease-out group-hover:scale-105"
-        />
+      <div className="relative rounded-2xl overflow-hidden">
 
-      </div>
+  <img
+    src={project.image}
+    alt={project.title}
+    className="w-full rounded-2xl transition-all duration-500 ease-out group-hover:scale-105"
+  />
+
+</div>
 
       {/* TITLE */}
-      <div className="mt-5">
-        <h3 className="text-lg text-white/90 tracking-tight">
-          {project.title}
-        </h3>
-      </div>
+      {/* TITLE */}
+<div className="mt-2">
+  <h3 className="text-sm md:text-lg text-white/90 tracking-tight">
+    {project.title}
+  </h3>
+</div>
 
     </motion.div>
   );
@@ -51,24 +52,25 @@ export function GraphicSection() {
     <section className="w-full min-h-screen bg-black text-white py-24 px-8 md:px-16">
       
       {/* HEADER */}
-      <div className="max-w-7xl mx-auto mb-16">
-        <h2 className="text-5xl md:text-7xl font-light tracking-tight bg-gradient-to-b from-white via-zinc-300 to-zinc-600 bg-clip-text text-transparent">
+      <div className="max-w-7xl mx-auto mb-8 md:mb-10">
+        <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light tracking-tight bg-gradient-to-b from-white via-zinc-300 to-zinc-600 bg-clip-text text-transparent">
           Graphic Design
         </h2>
 
-        <p className="text-white/50 mt-4 max-w-md">
+        <p className="text-sm md:text-base text-white/50 mt-4 max-w-md leading-relaxed">
           A curated gallery of visual work.
         </p>
       </div>
 
       {/* GRID */}
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-14">
-        
-        {projects.map((project, index) => (
-          <ProjectCard key={index} project={project} />
-        ))}
+      {/* GRID */}
+<div className="max-w-7xl mx-auto grid grid-cols-2 gap-x-4 gap-y-8 md:gap-x-8 md:gap-y-12">
 
-      </div>
+  {projects.map((project, index) => (
+    <ProjectCard key={index} project={project} />
+  ))}
+
+</div>
     </section>
   );
 }
